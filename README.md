@@ -36,6 +36,6 @@
 #Live Stream will continue to run until you [CTRL-z] to exit/stop
 
 
-#fuzzyduck:
+#fuzzyduck:  XdptGDg2mMQ7wrcp8eUDtTkSPW71vMteBF
 #MangledBlue: XexrpL5LWdtzkDRspikBqR5Ue1Kt3zyduv
 #moocowmoo: XmoocowYfrPKUR6p6M5aJZdVntQe71irCX
