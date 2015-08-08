@@ -33,7 +33,7 @@
 
 #Best terminal size: 99X33
 
-#Live Stream will continue to run until you [CTRL-z] to exit/stop
+#Live Stream will continue to run until you [CTRL-c] to exit/stop
 
 
 #fuzzyduck:  XdptGDg2mMQ7wrcp8eUDtTkSPW71vMteBF
