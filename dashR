@@ -27,7 +27,7 @@ cat << EOF
 EOF
 echo "-"
 echo "-"
-echo "----->  PRESS [CTRL-z]"
+echo "----->  PRESS [CTRL-c]"
 echo "---->    AT ANY TIME"
 echo "--->       TO EXIT"
 echo "-->      LIVE STREAM."
@@ -109,7 +109,7 @@ date
 echo " "
 echo " "
 echo " "
-echo "..... PRESS [CTRL-z].... AT ANY TIME... TO EXIT.. LIVE STREAM."
+echo "..... PRESS [CTRL-c].... AT ANY TIME... TO EXIT.. LIVE STREAM."
 # ----------------------------
 
 wait_clear 8;
