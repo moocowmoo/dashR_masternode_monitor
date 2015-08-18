@@ -87,7 +87,7 @@ cat << EOF
 
 ***YOUR DASH MASTERNODE 'IP' SHOULD = ENABLED
 
-`dash-cli masternode list | grep $MNIP`
+`dash-cli masternode list full | grep $MNIP`
 EOF
 echo " "
 echo " "
@@ -101,7 +101,7 @@ cat << EOF
 ***ZERO IS THE BEST SCORE FOR YOUR MASTERNODE
 
 
-`dash-cli masternode list pose | grep $MNIP`
+`dash-cli masternode list full | grep $MNIP`
 EOF
 echo " "
 echo " "
