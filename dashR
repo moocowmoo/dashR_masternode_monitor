@@ -88,6 +88,10 @@ cat << EOF
 ***YOUR DASH MASTERNODE 'IP' SHOULD = ENABLED
 
 `dash-cli masternode list full | grep $MNIP`
+
+
+ 
+`dash-cli getmininginfo`
 EOF
 echo " "
 echo " "
@@ -97,19 +101,6 @@ echo " "
 echo " "
 echo " "
 echo " "
-cat << EOF
-***ZERO IS THE BEST SCORE FOR YOUR MASTERNODE
-
-
-`dash-cli masternode list full | grep $MNIP`
-EOF
-echo " "
-echo " "
-date
-echo " "
-echo " "
-echo " "
-echo "..... PRESS [CTRL-c].... AT ANY TIME... TO EXIT.. LIVE STREAM."
 # ----------------------------
 
 wait_clear 8;
