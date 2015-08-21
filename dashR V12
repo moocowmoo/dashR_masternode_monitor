@@ -12,10 +12,11 @@ press enter or wait $1 seconds to continue "
 }
 # ----------------------------------------------------------------
 cat << EOF
-   YOU MUST USE DASH-CLI
-  FOR THE DASH MASTERNODE
-        LIVE STREAM
-    TO PROCEED PROPERLY
+
+
+DASH MASTERNODE LIVE STREAM
+
+
 EOF
 echo "-"
 echo "-"
@@ -24,6 +25,8 @@ echo "---->    AT ANY TIME"
 echo "--->       TO EXIT"
 echo "-->      LIVE STREAM."
 # ----------------------------
+echo "-"
+echo "-"
 wait_clear 10;
 cat << EOF
 
@@ -31,23 +34,21 @@ cat << EOF
 
 EOF
 # ----------------------------
+echo "-"
+echo "-"
 date
 wait_clear 1;
-cat << EOF
+echo "-"
+echo "-"
 echo "         SPORK INFO"
-EOF
-echo "-"
-echo "-"
 dash-cli spork active
 echo "-"
-echo "-"
 echo "         SOLO-MINING INFO"
-echo "-"
-echo "-"
 dash-cli getmininginfo
 echo "-"
-echo "-"
 date
+echo "-"
+echo "-"
 wait_clear 10;
 cat << EOF
 
@@ -60,36 +61,21 @@ cat << EOF
 ***YOUR DASH MASTERNODE 'IP' SHOULD = ENABLED
 
 
-
-`dash-cli masternode list full | grep $MNIP`
 EOF
+dash-cli masternode list full | grep $MNIP
+echo " "
+echo " "
+echo "        MASTERNODE STATUS"
+dash-cli masternode status
 echo " "
 echo " "
 date
 echo " "
 echo " "
-echo " "
-echo " "
 
 # ----------------------------
-wait_clear 8;
+wait_clear 10;
 
-cat << EOF
-
-***   CHECKING YOUR DASH MASTERNODE IP CONNECTION(S) ON PORT: 9999
-
-`netstat -an | grep 9999 | more`
-
-
-***   CHECKING YOUR DASH 'LISTENING' ABILITY : LISTENING, ON PORT : 9999
-
-`netstat -an | grep LISTEN | grep 9999`
-EOF
-echo " "
-echo " "
-date
-# ----------------------------
-wait_clear 8;
 cat << EOF
 
 ***GET-INFO FOR 'DASH'
@@ -214,5 +200,30 @@ echo -e " ----"
 date
 
 wait_clear 10;
+cat << EOF
 
+***   CHECKING YOUR DASH MASTERNODE IP CONNECTION(S) ON PORT: 9999
+
+`netstat -an | grep 9999 | more`
+
+
+***   CHECKING YOUR DASH 'LISTENING' ABILITY : LISTENING, ON PORT : 9999
+
+`netstat -an | grep LISTEN | grep 9999`
+EOF
+echo " "
+echo " "
+date
+# ----------------------------
+wait_clear 8;
+
+cat << EOF
+
+            MASTERNODE WINNERS
+EOF
+dash-cli masternode winners
+echo " "
+echo " "
+date
+wait_clear 10;
 dashR
