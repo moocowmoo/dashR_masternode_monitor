@@ -226,4 +226,4 @@ echo " "
 echo " "
 date
 wait_clear 10;
-dashR
+exec $0

@@ -1,25 +1,20 @@
-#To use dashR
-#RUN the following commands in the .dash DIR:
+#Install
 
-#cd ~/.dash
-#wget https://github.com/MangledBlue/DASH/blob/master/dashR
-#chmod +x dashR
-#sudo cp dashd /usr/bin
-#sudo cp dash-cli /usr/bin
-#sudo cp dashR /usr/bin
-#sudo chmod 775 /usr/bin/dashd
-#sudo chmod 775 /usr/bin/dash-cli
-#sudo chmod 775 /usr/bin/dashR
-#cd
-#dashR
+    git clone https://github.com/moocowmoo/masternode_monitor.git
+    cd masternode_monitor
+    ./install.sh
+    # logout, log back in
 
-#You can now run: dashd, dash-cli, and dashR
-#...from anywhere in Linux
-#To start dashR, simply input: dashR
-#Live Stream will continue to run until you [CTRL-c] to exit/stop
+#Usage
 
-#contributors:
-#fuzzyduck:  XdptGDg2mMQ7wrcp8eUDtTkSPW71vMteBF
-#MangledBlue: XexrpL5LWdtzkDRspikBqR5Ue1Kt3zyduv
-#moocowmoo: XmoocowYfrPKUR6p6M5aJZdVntQe71irCX
-#MangledBlue 2015
+    on a running DASH masternode simply run:
+
+    masternode_status.sh
+    
+
+#Contributors
+
+    fuzzyduck:  XdptGDg2mMQ7wrcp8eUDtTkSPW71vMteBF
+    MangledBlue: XexrpL5LWdtzkDRspikBqR5Ue1Kt3zyduv
+    moocowmoo: XmoocowYfrPKUR6p6M5aJZdVntQe71irCX
+
