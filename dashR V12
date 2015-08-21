@@ -1,25 +1,17 @@
 #!/bin/bash
 clear
 # -----
-
 MNIP=`wget -qO- http://ipecho.net/plain`;
-
 export GREP_OPTIONS=--color=always
-
 # -----
-
 function wait_clear() {
     PROMPT="
 press enter or wait $1 seconds to continue "
     read -p "$PROMPT" -t $1 NOOP;
     clear;
 }
-
 # ----------------------------------------------------------------
-
 cat << EOF
-
-
    YOU MUST USE DASH-CLI
   FOR THE DASH MASTERNODE
         LIVE STREAM
@@ -31,72 +23,43 @@ echo "----->  PRESS [CTRL-c]"
 echo "---->    AT ANY TIME"
 echo "--->       TO EXIT"
 echo "-->      LIVE STREAM."
-
 # ----------------------------
-
-
-
+echo "-"
+echo "-"
 dash-cli spork active
-
-
-
-
 wait_clear 10;
-
 cat << EOF
-
 ***   START DASH MASTERNODE : LIVE STREAM
 EOF
-
 # ----------------------------
-
 wait_clear 1;
-
 cat << EOF
-
-
 ***   CHECKING YOUR DASH MASTERNODE IP CONNECTION(S) ON PORT: 9999
-
 `netstat -an | grep 9999 | more`
-
 ***   CHECKING YOUR DASH 'LISTENING' ABILITY
 ***   LISTENING, ON PORT : 9999
-
 `netstat -an | grep LISTEN | grep 9999`
 EOF
 echo " "
 echo " "
 date
-
 # ----------------------------
-
 wait_clear 8;
-
 cat << EOF
-
 ***GET-INFO FOR 'DASH'
-
 `dash-cli getinfo`
 EOF
 echo " "
 echo " "
 date
-
 # ----------------------------
-
 wait_clear 8;
-
 cat << EOF
-
 'PLEASE WAIT WHILE ADDITIONAL INFORMATION IS BEING GATHERED...'
 EOF
 sleep 1
 cat << EOF
-
-
 ***YOUR DASH MASTERNODE 'IP' SHOULD = ENABLED
-
-
 
 `dash-cli masternode list full | grep $MNIP`
 
@@ -113,15 +76,13 @@ echo " "
 echo " "
 echo " "
 # ----------------------------
-
 wait_clear 8;
-
 echo " "
 date
 echo " "
-
 # ----------------------------
 echo " "
+
 # -----
 
 C_RED="\e[31m";
