@@ -24,20 +24,65 @@ echo "---->    AT ANY TIME"
 echo "--->       TO EXIT"
 echo "-->      LIVE STREAM."
 # ----------------------------
+wait_clear 10;
+cat << EOF
+
+***   START DASH MASTERNODE : LIVE STREAM
+
+EOF
+# ----------------------------
+date
+wait_clear 1;
+cat << EOF
+echo "         SPORK INFO"
+EOF
 echo "-"
 echo "-"
 dash-cli spork active
+echo "-"
+echo "-"
+echo "         SOLO-MINING INFO"
+echo "-"
+echo "-"
+dash-cli getmininginfo
+echo "-"
+echo "-"
+date
 wait_clear 10;
 cat << EOF
-***   START DASH MASTERNODE : LIVE STREAM
+
+'PLEASE WAIT WHILE ADDITIONAL INFORMATION IS BEING GATHERED...'
 EOF
-# ----------------------------
-wait_clear 1;
+sleep 1
 cat << EOF
+
+
+***YOUR DASH MASTERNODE 'IP' SHOULD = ENABLED
+
+
+
+`dash-cli masternode list full | grep $MNIP`
+EOF
+echo " "
+echo " "
+date
+echo " "
+echo " "
+echo " "
+echo " "
+
+# ----------------------------
+wait_clear 8;
+
+cat << EOF
+
 ***   CHECKING YOUR DASH MASTERNODE IP CONNECTION(S) ON PORT: 9999
+
 `netstat -an | grep 9999 | more`
-***   CHECKING YOUR DASH 'LISTENING' ABILITY
-***   LISTENING, ON PORT : 9999
+
+
+***   CHECKING YOUR DASH 'LISTENING' ABILITY : LISTENING, ON PORT : 9999
+
 `netstat -an | grep LISTEN | grep 9999`
 EOF
 echo " "
@@ -46,7 +91,9 @@ date
 # ----------------------------
 wait_clear 8;
 cat << EOF
+
 ***GET-INFO FOR 'DASH'
+
 `dash-cli getinfo`
 EOF
 echo " "
@@ -54,35 +101,9 @@ echo " "
 date
 # ----------------------------
 wait_clear 8;
-cat << EOF
-'PLEASE WAIT WHILE ADDITIONAL INFORMATION IS BEING GATHERED...'
-EOF
-sleep 1
-cat << EOF
-***YOUR DASH MASTERNODE 'IP' SHOULD = ENABLED
-
-`dash-cli masternode list full | grep $MNIP`
-
-
-
-`dash-cli getmininginfo`
-EOF
-echo " "
 echo " "
 date
 echo " "
-echo " "
-echo " "
-echo " "
-echo " "
-# ----------------------------
-wait_clear 8;
-echo " "
-date
-echo " "
-# ----------------------------
-echo " "
-
 # -----
 
 C_RED="\e[31m";
