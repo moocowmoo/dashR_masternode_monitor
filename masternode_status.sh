@@ -81,6 +81,8 @@ cat << EOF
 ***GET-INFO FOR 'DASH'
 
 `dash-cli getinfo`
+
+'dash-cli masternode count all'
 EOF
 echo " "
 echo " "
